@@ -1,0 +1,14 @@
+﻿@page "/orders/{OrderId:int}"
+
+<h3>Order</h3>
+<p>OrderId: @OrderId</p>
+
+<h4>Products</h4>
+<ul>
+    <li><a href="/orders/@OrderId/product/42">Product 42</a></li>
+</ul>
+
+@code {
+    [Parameter]
+    public int OrderId { get; set; }
+}

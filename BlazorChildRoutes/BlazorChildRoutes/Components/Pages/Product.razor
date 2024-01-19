@@ -1,0 +1,16 @@
+﻿@page "/orders/{OrderId:int}/product/{ProductId:int}"
+
+<h3>Product Details</h3>
+
+<p>OrderId: @OrderId</p>
+<p>ProductId: @ProductId</p>
+
+<p>Go to <a href="/orders/@OrderId">Order @OrderId</a></p>
+
+@code {
+    [Parameter]
+    public int OrderId { get; set; }
+
+    [Parameter]
+    public int ProductId { get; set; }
+}
